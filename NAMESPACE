@@ -1,0 +1,3 @@
+useDynLib(PsiFPOP, .registration=TRUE)
+export("PsiFPOP","PsiOP")
+importFrom(Rcpp, evalCpp)
