@@ -3,7 +3,7 @@
 #include "PsiFPOP.h"
 #include "Candidate.h"
 #include <algorithm>
-#include <math.h>
+#include <cmath>
 #include <list>
 #include <limits>
 #include "Sampling.h"
@@ -19,26 +19,26 @@ PsiFPOP::PsiFPOP(
     int sampling_method_parameter_, 
     std::vector<double>  wt_) {
         
-    y = y_;
-    n = y_.size();
-    d = Interval(*std::min_element(y_.begin(), y_.end()), *std::max_element(y_.begin(), y_.end()));
-    y.insert(y.begin(), 0);
-    beta = beta_;
+    y     = y_;
+    n     = y_.size();
+    d     = Interval(*std::min_element(y_.begin(), y_.end()), *std::max_element(y_.begin(), y_.end()));
+    beta  = beta_;
     alpha = alpha_;
+    y.insert(y.begin(), 0);
     if (wt_.size()==1 && wt_[0] == 0)
     {
         wt = std::vector<double> (y.size(), 1);
     }
     else
     {
-       wt = wt_;
-       wt.insert(wt.begin(), 0); 
+        wt = wt_;
+        wt.insert(wt.begin(), 0); 
     }
-    cp = std::vector<int> (y.size(), 0);
-    sampling_method = sampling_method_;
+    cp                        = std::vector<int> (y.size(), 0);
+    sampling_method           = sampling_method_;
     sampling_method_parameter = sampling_method_parameter_;
-    nb_candidates = std::vector<int> (y.size()-1, 0);
-    nb_intervals = std::vector<int> (y.size()-1, 0);
+    nb_candidates             = std::vector<int> (y.size()-1, 0);
+    nb_intervals              = std::vector<int> (y.size()-1, 0);
 }
 
 //- changepoints_search ------------------------------------------------------//
@@ -80,7 +80,7 @@ void PsiFPOP::Search() {
             min_candidate = (*vector_of_it_candidates[i]).Minimum_of_cost_function(); 
             if (min_candidate < F) //(3)
             {
-                F = min_candidate;
+                F     = min_candidate;
                 t_hat = (*vector_of_it_candidates[i]).Get_tau();
             }
         }

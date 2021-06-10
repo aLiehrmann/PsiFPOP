@@ -7,17 +7,21 @@
 PsiOP(y, beta, alpha, wt = -1)
 }
 \arguments{
-\item{y}{a vector of data ordered according to an attribute}
+\item{y}{A vector of observations.}
 
-\item{beta}{a coefficient used in the calculation of the penalty (recommended: 2.5)}
+\item{beta}{a constant used in the calculation of the penalty}
 
-\item{alpha}{a constant used in the calculation of the penalty (recommended: 10+2.5*log(length(y)))}
+\item{alpha}{a constant used in the calculation of the penalty 
+(recommended: gamma+beta*log(length(y)))}
 
-\item{wt}{a vector of weight linked to the data}
+\item{wt}{A vector of weights associated to the observations.}
 }
 \value{
-a list with the changepoints and the number of intervals/candidates at each step
+a list with the changepoints and the number of intervals/candidates
+ at each step
 }
 \description{
-PsiOP is an exact segmentation algorithm.
+PsiOP is an exact segmentation algorithm that implements a least 
+squares criterion with a multiscale penalty described in Verzelen et al. 2020.
+(arXiv:2010.11470)
 }

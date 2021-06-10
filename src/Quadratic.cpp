@@ -1,5 +1,5 @@
 #include "Quadratic.h"
-#include <math.h> 
+#include <cmath> 
 #include <array>
 #include <limits> 
 #include <iostream>

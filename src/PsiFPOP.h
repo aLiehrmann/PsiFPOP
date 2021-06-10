@@ -23,12 +23,12 @@ private:
     
 public:
     /**
-     * @param[in] y A data vector ordered according to an attribute.
-     * @param[in] beta A coefficient used in the calculation of the penalty.
+     * @param[in] y A vector of observations.
+     * @param[in] beta A constant used in the calculation of the penalty.
      * @param[in] alpha A constant used in the calculation of the penalty.
      * @param[in] sampling_method A sampling method for candidates.
      * @param[in] param_method A parameter used by the sampling method.
-     * @param[in] wt A vector of weight linked to the data.    
+     * @param[in] wt A vector of weights associated to the observations.    
      */
     PsiFPOP(
         std::vector<double> y_,

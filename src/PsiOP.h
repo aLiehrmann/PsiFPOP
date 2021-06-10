@@ -17,10 +17,10 @@ private:
     
 public:
     /**
-     * @param[in] y a data vector ordered according to an attribute.
-     * @param[in] beta a coefficient used in the calculation of the penalty.
+     * @param[in] y A vector of observations.
+     * @param[in] beta a constant used in the calculation of the penalty.
      * @param[in] alpha a constant used in the calculation of the penalty.
-     * @paraam[in] wt a vector of weight linked to the data.    
+     * @param[in] wt A vector of weights associated to the observations.   
      */
     PsiOP(
         std::vector<double> y_, 

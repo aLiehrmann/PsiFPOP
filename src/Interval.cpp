@@ -9,7 +9,7 @@
 //- Constructors -------------------------------------------------------------//
 Interval::Interval() {   
     begin = 1;
-    end = -1;
+    end   = -1;
 }
 
 Interval::Interval(
@@ -17,19 +17,19 @@ Interval::Interval(
     double end_) {
 
     begin = begin_;
-    end = end_;
+    end   = end_;
 }
 
 Interval::Interval(std::list<Interval> & list_of_intervals_to_intersect) {   
     if (list_of_intervals_to_intersect.empty())
     {
-        begin=1;
-        end=-1;
+        begin = 1;
+        end   = -1;
     }
     else
     {
         begin = (*std::max_element(list_of_intervals_to_intersect.begin(),list_of_intervals_to_intersect.end(), Compare_begin)).begin;
-        end = (*std::min_element(list_of_intervals_to_intersect.begin(),list_of_intervals_to_intersect.end(), Compare_end)).end;
+        end   = (*std::min_element(list_of_intervals_to_intersect.begin(),list_of_intervals_to_intersect.end(), Compare_end)).end;
     }
 }
 
@@ -41,7 +41,7 @@ bool Interval::IsEmpty_or_singleton() {
 //- Intersect_in_place -------------------------------------------------------//
 void Interval::operator&=(Interval const& interval_to_intesect) {
     begin = std::max(begin, interval_to_intesect.begin);
-    end = std::min(end, interval_to_intesect.end);
+    end   = std::min(end, interval_to_intesect.end);
 }
 
 //- Comparator ---------------------------------------------------------------//

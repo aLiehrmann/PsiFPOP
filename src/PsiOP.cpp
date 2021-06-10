@@ -3,7 +3,7 @@
 #include "PsiOP.h"
 #include "Candidate.h"
 #include <algorithm>
-#include <math.h>
+#include <cmath>
 #include <limits>
 #include <list> 
 #include "Ordered_list_of_intervals.h"
@@ -14,12 +14,12 @@ PsiOP::PsiOP(
     double alpha_, 
     std::vector<double>  wt_) {
 
-    y = y_;
-    n = y_.size();
-    d = Interval(*std::min_element(y.begin(), y.end()), *std::max_element(y.begin(), y.end()));
-    y.insert(y.begin(), 0);
-    beta = beta_;
+    y     = y_;
+    n     = y_.size();
+    d     = Interval(*std::min_element(y.begin(), y.end()), *std::max_element(y.begin(), y.end()));
+    beta  = beta_;
     alpha = alpha_;
+    y.insert(y.begin(), 0);
     if (wt_.size()==1 && wt_[0] == 0)
     {
         wt = std::vector<double> (y.size(), 1);
@@ -47,7 +47,7 @@ void PsiOP::Search() {
             min_candidate = (*it_candidate).Minimum_of_cost_function();
             if (min_candidate < F)
             {
-                F = min_candidate;
+                F     = min_candidate;
                 t_hat = (*it_candidate).Get_tau();
             }
         }

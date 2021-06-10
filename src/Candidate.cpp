@@ -5,7 +5,7 @@
 #include <array> 
 #include <iostream> 
 #include <list>
-#include <math.h>
+#include <cmath>
 #include "Ordered_list_of_intervals.h"
 
 //- Constructor --------------------------------------------------------------//

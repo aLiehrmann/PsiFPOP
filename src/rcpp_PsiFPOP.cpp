@@ -18,11 +18,11 @@ List PsiFPOP_cpp(
 
     typedef std::vector<int> (*fun)(int, int, int);
     std::map<std::string, fun> map_sampling_method;
-    map_sampling_method["rand_one"] = Sampling::Rand_one;
-    map_sampling_method["last"] = Sampling::Last;
-    map_sampling_method["all"] = Sampling::All;
-    map_sampling_method["only"] = Sampling::Only;
-    map_sampling_method["rand_with_replacement"] = Sampling::Rand_with_replacement;
+    map_sampling_method["rand_one"]                 = Sampling::Rand_one;
+    map_sampling_method["last"]                     = Sampling::Last;
+    map_sampling_method["all"]                      = Sampling::All;
+    map_sampling_method["only"]                     = Sampling::Only;
+    map_sampling_method["rand_with_replacement"]    = Sampling::Rand_with_replacement;
     map_sampling_method["rand_without_replacement"] = Sampling::Rand_without_replacement;
     
     if (map_sampling_method.find(sampling_method)!= map_sampling_method.end())
@@ -38,8 +38,8 @@ List PsiFPOP_cpp(
       f.Search();
       List l = List::create(
     	_["changepoints"] = f.Retreive_changepoints(),
-      _["intervals"] = f.Get_intervals(),
-      _["candidates"] = f.Get_candidates()
+      _["intervals"]    = f.Get_intervals(),
+      _["candidates"]   = f.Get_candidates()
       );
       return l;
     }
