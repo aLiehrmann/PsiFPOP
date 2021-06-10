@@ -16,21 +16,21 @@ PsiFPOP(
 \arguments{
 \item{y}{A vector of observations.}
 
-\item{beta}{a constant used in the calculation of the penalty}
+\item{beta}{A constant used in the calculation of the penalty.}
 
-\item{alpha}{a constant used in the calculation of the penalty 
+\item{alpha}{A constant used in the calculation of the penalty.
 (recommended: gamma+beta*log(length(y)))}
 
-\item{sampling_method}{a sampling method for candidates ("rand_one", "last",
-"rand_with_replacement", "rand_without_replacement", "all", "only")}
+\item{sampling_method}{A sampling method for candidates ("rand_one", "last",
+"rand_with_replacement", "rand_without_replacement", "all", "only").}
 
-\item{sampling_method_parameter}{a parameter used by the sampling method}
+\item{sampling_method_parameter}{A parameter used by the sampling method.}
 
 \item{wt}{A vector of weights associated to the observations.}
 }
 \value{
-a list with the changepoints and the number of intervals/candidates 
-at each step
+A list with the changepoints and the number of intervals/candidates 
+at each step.
 }
 \description{
 PsiFPOP is an exact segmentation algorithm that extends 

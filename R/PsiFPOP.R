@@ -3,15 +3,15 @@
 #' functionnal pruning ideas from FPOP to a least squares criterion with a 
 #' multiscale penalty described in Verzelen et al. 2020 (arXiv:2010.11470).
 #' @param y A vector of observations.
-#' @param beta a constant used in the calculation of the penalty
-#' @param alpha a constant used in the calculation of the penalty 
+#' @param beta A constant used in the calculation of the penalty.
+#' @param alpha A constant used in the calculation of the penalty.
 #' (recommended: gamma+beta*log(length(y)))
-#' @param sampling_method a sampling method for candidates ("rand_one", "last",
-#' "rand_with_replacement", "rand_without_replacement", "all", "only")
-#' @param sampling_method_parameter a parameter used by the sampling method
+#' @param sampling_method A sampling method for candidates ("rand_one", "last",
+#' "rand_with_replacement", "rand_without_replacement", "all", "only").
+#' @param sampling_method_parameter A parameter used by the sampling method.
 #' @param wt A vector of weights associated to the observations.
-#' @return a list with the changepoints and the number of intervals/candidates 
-#' at each step
+#' @return A list with the changepoints and the number of intervals/candidates 
+#' at each step.
 
 PsiFPOP <- function(
   y, 
@@ -32,12 +32,12 @@ PsiFPOP <- function(
 #' squares criterion with a multiscale penalty described in Verzelen et al. 2020.
 #' (arXiv:2010.11470)
 #' @param y A vector of observations.
-#' @param beta a constant used in the calculation of the penalty
+#' @param beta a constant used in the calculation of the penalty.
 #' @param alpha a constant used in the calculation of the penalty 
-#' (recommended: gamma+beta*log(length(y)))
+#' (recommended: gamma+beta*log(length(y))).
 #' @param wt A vector of weights associated to the observations.
-#' @return a list with the changepoints and the number of intervals/candidates
-#'  at each step
+#' @return A list with the changepoints and the number of intervals/candidates
+#'  at each step.
 
 PsiOP <- function(
   y, 
