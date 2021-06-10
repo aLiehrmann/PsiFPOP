@@ -1,8 +1,7 @@
 #' PsiFPOP
-#' @description PsiFPOP is an extension of Fpop, an exact segmentation algorithm 
-#' based on functionnal pruning. This extension implements a least squares 
-#' criterion with a multiscale penalty described in Verzelen et al. 2020.
-#' (arXiv:2010.11470)
+#' @description PsiFPOP is an exact segmentation algorithm that extends 
+#' functionnal pruning ideas from FPOP to a least squares criterion with a 
+#' multiscale penalty described in Verzelen et al. 2020 (arXiv:2010.11470).
 #' @param y A vector of observations.
 #' @param beta a constant used in the calculation of the penalty
 #' @param alpha a constant used in the calculation of the penalty 

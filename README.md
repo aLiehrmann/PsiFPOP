@@ -9,9 +9,8 @@
 
 ## Introduction
 
-PsiFPOP is an extension of FPOP, an exact and fast segmentation algorithm based 
-on functional pruning. This extension implements a least squares criterion with 
-a multiscale penalty.
+Psi-FPOP is an exact segmentation algorithm that extends functionnal pruning 
+ideas from FPOP to a least squares criterion with a multiscale penalty.
 
 * Details regarding the multiscale penalty can be found [here](https://arxiv.org/abs/2010.11470).
 * Details regarding the FPOP algorithm can be found [here](https://doi.org/10.1007/s11222-016-9636-3).

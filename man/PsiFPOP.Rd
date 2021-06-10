@@ -33,8 +33,7 @@ a list with the changepoints and the number of intervals/candidates
 at each step
 }
 \description{
-PsiFPOP is an extension of Fpop, an exact segmentation algorithm 
-based on functionnal pruning. This extension implements a least squares 
-criterion with a multiscale penalty described in Verzelen et al. 2020.
-(arXiv:2010.11470)
+PsiFPOP is an exact segmentation algorithm that extends 
+functionnal pruning ideas from FPOP to a least squares criterion with a 
+multiscale penalty described in Verzelen et al. 2020 (arXiv:2010.11470).
 }

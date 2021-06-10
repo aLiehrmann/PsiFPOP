@@ -5,7 +5,7 @@ Version: 1.0
 Date: 2019-06-28
 Author: Arnaud Liehrmann 
 Maintainer: Arnaud Liehrmann <arnaud.lieh@gmail.com>
-Description: Psi-FPOP is an extension of FPOP, an exact data segmentation algorithm based on functional pruning. This extension implements a least squares criterion with a multiscale penalty described in Verzelen et al. 2020.
+Description: Psi-FPOP is an exact segmentation algorithm that extends functionnal pruning ideas from FPOP to a least squares criterion with a multiscale penalty described in Verzelen et al. 2020 (arXiv:2010.11470).
 License: GPL-3
 Imports: Rcpp (>= 1.0.1)
 LinkingTo: Rcpp
