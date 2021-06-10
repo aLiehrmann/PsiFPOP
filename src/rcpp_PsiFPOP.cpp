@@ -45,7 +45,6 @@ List PsiFPOP_cpp(
     }
     else
     { 
-      std::cout << "This sampling method is not found.";
       return List ();
     }
 }
