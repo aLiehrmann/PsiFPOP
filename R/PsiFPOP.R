@@ -19,7 +19,7 @@ PsiFPOP <- function(
   alpha, 
   sampling_method="rand_one", 
   sampling_method_parameter=1, 
-  wt=-1) {
+  wt=NULL) {
   
   if (is.null(wt)) {
     wt = rep(1,length(y));
@@ -45,7 +45,7 @@ PsiOP <- function(
   y, 
   beta, 
   alpha, 
-  wt=-1) {
+  wt=NULL) {
 
   if (is.null(wt)) {
     wt = rep(1,length(y));
