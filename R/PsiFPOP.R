@@ -21,8 +21,10 @@ PsiFPOP <- function(
   sampling_method_parameter=1, 
   wt=-1) {
   
-  if (wt==-1) {
+  if (is.null(wt)) {
     wt = rep(1,length(y));
+  } else if (length(wt) != length(y)){
+    warning("length(wt) != length(y)")
   }
   return (PsiFPOP_cpp(y, beta, alpha, sampling_method, sampling_method_parameter, wt))
 }
@@ -45,8 +47,10 @@ PsiOP <- function(
   alpha, 
   wt=-1) {
 
-  if (wt==-1) {
+  if (is.null(wt)) {
     wt = rep(1,length(y));
+  } else if (length(wt) != length(y)){
+    warning("length(wt) != length(y)")
   }
   return (PsiOP_cpp(y, beta, alpha, wt))
 }
